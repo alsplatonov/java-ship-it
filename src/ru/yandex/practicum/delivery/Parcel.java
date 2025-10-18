@@ -14,6 +14,10 @@ public abstract class Parcel {
         this.sendDay = sendDay;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     public void packageItem() {
         System.out.println("Посылка " + description + " упакована");
     };
