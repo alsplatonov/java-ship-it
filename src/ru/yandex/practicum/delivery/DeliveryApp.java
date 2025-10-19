@@ -102,7 +102,8 @@ public class DeliveryApp {
                 parcel = new FragileParcel(description, weight, deliveryAddress, sendDay);
                 abilityToAdd = fragileBox.addParcel((FragileParcel) parcel);
                 if (abilityToAdd) {
-                    trackingParcels.add((Trackable) parcel); //добавили в отдельный список поддерживающих трекинг посылок
+                    trackingParcels.add((Trackable) parcel); //добавили в отдельный список поддерживающих
+                                                                                                // трекинг посылок
                 }
                 break;
             default:
@@ -150,21 +151,24 @@ public class DeliveryApp {
             case 1:
                 System.out.println("Содержимое коробки стандартных посылок:");
                 for (StandardParcel parcel : standardBox.getAllParcels()) {
-                    System.out.println(parcel.getDescription() + " — вес: " + parcel.weight + " кг, адрес: " + parcel.deliveryAddress);
+                    System.out.println(parcel.getDescription() + " — вес: " + parcel.weight + " кг, адрес: " +
+                            parcel.deliveryAddress);
                 }
                 break;
 
             case 2:
                 System.out.println("Содержимое коробки скоропортящихся посылок:");
                 for (PerishableParcel parcel : perishableBox.getAllParcels()) {
-                    System.out.println(parcel.getDescription() + " — вес: " + parcel.weight + " кг, адрес: " + parcel.deliveryAddress);
+                    System.out.println(parcel.getDescription() + " — вес: " + parcel.weight + " кг, адрес: " +
+                            parcel.deliveryAddress);
                 }
                 break;
 
             case 3:
                 System.out.println("Содержимое коробки хрупких посылок:");
                 for (FragileParcel parcel : fragileBox.getAllParcels()) {
-                    System.out.println(parcel.getDescription() + " — вес: " + parcel.weight + " кг, адрес: " + parcel.deliveryAddress);
+                    System.out.println(parcel.getDescription() + " — вес: " + parcel.weight + " кг, адрес: " +
+                            parcel.deliveryAddress);
                 }
                 break;
 
