@@ -1,4 +1,7 @@
 package ru.yandex.practicum;
 
-public class DeliveryCostTest {
-}
+import org.junit.jupiter.api.Test;
+
+public class DeliveryCostTest {}
+
+

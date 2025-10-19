@@ -149,6 +149,11 @@ public class DeliveryApp {
 
         switch (type) {
             case 1:
+                if (standardBox.getAllParcels().isEmpty()) {
+                    System.out.println("Коробка пуста!");
+                    return;
+                }
+
                 System.out.println("Содержимое коробки стандартных посылок:");
                 for (StandardParcel parcel : standardBox.getAllParcels()) {
                     System.out.println(parcel.getDescription() + " — вес: " + parcel.weight + " кг, адрес: " +
@@ -157,6 +162,11 @@ public class DeliveryApp {
                 break;
 
             case 2:
+                if (perishableBox.getAllParcels().isEmpty()) {
+                    System.out.println("Коробка пуста!");
+                    return;
+                }
+
                 System.out.println("Содержимое коробки скоропортящихся посылок:");
                 for (PerishableParcel parcel : perishableBox.getAllParcels()) {
                     System.out.println(parcel.getDescription() + " — вес: " + parcel.weight + " кг, адрес: " +
@@ -165,6 +175,11 @@ public class DeliveryApp {
                 break;
 
             case 3:
+                if (fragileBox.getAllParcels().isEmpty()) {
+                    System.out.println("Коробка пуста!");
+                    return;
+                }
+
                 System.out.println("Содержимое коробки хрупких посылок:");
                 for (FragileParcel parcel : fragileBox.getAllParcels()) {
                     System.out.println(parcel.getDescription() + " — вес: " + parcel.weight + " кг, адрес: " +
