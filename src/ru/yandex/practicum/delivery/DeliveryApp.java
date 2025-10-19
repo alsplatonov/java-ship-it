@@ -41,7 +41,6 @@ public class DeliveryApp {
                     } else {
                         System.out.println("Нет отслеживаемых посылок");
                     }
-
                     break;
                 case 5:
                     showBoxContents();
