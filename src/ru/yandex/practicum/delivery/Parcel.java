@@ -18,6 +18,10 @@ public abstract class Parcel {
         return description;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
     public void packageItem() {
         System.out.println("Посылка " + description + " упакована");
     };
